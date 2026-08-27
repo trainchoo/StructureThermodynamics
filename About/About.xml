@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Structure Thermodynamics</Name>
+  <Author>GiMoe</Author>
+  <Version>0.2.6428.27798.8</Version>
+  <!-- Steam description using steam styling tags for Steam workshop page -->
+  <Description>
+    [h1]Structure Thermodynamics[/h1]
+    [b]WARNING:[/b] This is a StationeersLaunchPad Plugin Mod. It requires Bepinex to be installed with the StationeersLaunchPad plugin.
+    See: https://github.com/StationeersLaunchPad/StationeersLaunchPad
+    If you have StationeersMods installed, please remove it and use StationeersLaunchPad instead.
+
+    👨‍🚀 "Oh the weather outside is frightful, But the fire is so delightful... ☕"
+    ⚠️" Warning: Suit temperature critical!"
+    [i]Maybe building a base on a planet with a surface temperature of 700 degrees was a bad idea[/i]
+
+    [b]Mod description:[/b] Enables thermal transfer via convection, conduction, and radiation between your rooms and the outside atmosphere.
+
+    This will now force you to either consider insulating your base, or building structural radiators to get rid of heat. Config settings available for you to increase or decrease thermal effects due to this mod. Warning!: this mod is in beta, and may not be balanced for gameplay you may be used to.
+
+    [b]Material thermal properties:[/b]
+    Iron - Terrible insulator, and a great heat conductor. Building a base from iron walls and frames will do very little to protect you from the outside weather
+    Steel - Also a bad insulator, and great heat conductor. Has high reflectivity, so will reduce radiation heat loss
+    Glass - Decent insulator, but low reflectivity and will radiate heat.
+    Composite - Decent insulator, but will also radiate heat quickly if placed as the outside facing surface
+    Padded Walls - Very good insulator and will radiate heat if placed outside.
+
+    [b]Tips:[/b]
+    - If you want to insulate your base from the outside, use insulating walls inside your room, and place reflective material (i.e. steel or iron) on the outside. This will impede both conduction and radiation
+    - You can also create a vacuum layer between your room the outside, as this will greatly reduce heat loss from your room. You will still radiate heat, so make sure you use steel to line the outside walls.
+    - If you want to cool off your room, build low insulating walls (iron). If the outside is a vacuum, you can build additional radiators to dissipate heat (perpendicular walls to your walls). The more surface area you have to the outside the faster energy will transfer between the two environments.
+    - Heat will use the easiest path to escape from your room, so using frames, which have potentially 5 sides to the outside will do very little to insulate you.
+    - Heat transfer is a function of room surface area. So large rooms will lose/gain heat faster.
+
+    - You can press the F8 key which will recalculate your structure's thermal properties for every room. Press F3 after to see the log of the resistances calculated: R# -> R# (or Atmosphere) shows the connection between rooms or room to outside. I&lt;->are thermal internal resistances (higher means more insulating). B&lt;->are bulk conduction (if you have walls or frames between your walls), E&lt;-> are external facing resistances. The arrow shows direction of heat flow. You can use this to experiment with different materials and structures.
+  </Description>
+  <!-- Ingame Description using TMP tags for Workshop menu -->
+  <InGameDescription>
+    <![CDATA[<size="30"><color=#ffa500> Structure Thermodynamics </color></size>
+<b>WARNING:</b> <color=#ff0000>This is a StationeersLaunchPad Plugin Mod. It requires Bepinex to be installed with the StationeersLaunchPad plugin.</color>
+See: https://github.com/StationeersLaunchPad/StationeersLaunchPad
+
+Enables thermal tranfer via convection, conduction, and radiation between your rooms and the outside atmosphere.
+]]>
+  </InGameDescription>
+  <!-- All contents of ChangeLog should be changed for each publication for Steam workshop page -->
+  <ChangeLog>
+    [h3]Version 0.2.6428.27798.8:[/h3]
+    [list]
+    [*]Update stopwatch error fixed due to not being instantiated on clients
+    [/list]
+  </ChangeLog>
+  <WorkshopHandle>3336803492</WorkshopHandle>
+  <!-- StationeersMods and BepInEx tags for Steam workshop page will be automatically added by the framework when publishing -->
+  <Tags>
+    <Tag>StationeersMods</Tag>
+  </Tags>
+  <!-- Automatic downloads of dependencies -->
+  <Dependencies />
+  <!-- Automatic reordering of the mods list -->
+  <LoadBefore />
+  <LoadAfter />
+</ModMetadata>
