@@ -23,6 +23,11 @@ namespace StructureThermodynamicsOverhaul.scripts
             "StructureCompositeWall04",
             "StructureCompositeWindow",
 
+            //Composite window shutters
+            "StructureCompositeWindowShutter",
+            "StructureCompositeWindowShutterConnector",
+            "StructureCompositeWindowShutterController",
+
             //Arch walls
             "StructureWallArch",
             "StructureWallArchArrow",
@@ -122,6 +127,11 @@ namespace StructureThermodynamicsOverhaul.scripts
             {"StructureCompositeWall03", Solid.Composite},
             {"StructureCompositeWall04", Solid.Composite},
             {"StructureCompositeWindow", Solid.Glass},
+
+            //Composite window shutters
+            {"StructureCompositeWindowShutter", Solid.Glass},
+            {"StructureCompositeWindowShutterConnector", Solid.Composite},
+            {"StructureCompositeWindowShutterController", Solid.Composite},
 
             //Arch walls
             {"StructureWallArch", Solid.Steel},
