@@ -335,10 +335,25 @@ namespace StructureThermodynamicsOverhaul.scripts
         private float getEffectiveResistance(Link.Type linkType, float area, float length, Structure structure)
         {
             float buildStateMultiplier = ThermalConstants.getBuildStateThermalMultiplier(structure.CurrentBuildStateIndex + 1, structure.BuildStates.Count);
+            ThermalConstants.Solid material = ThermalConstants.getMaterialFromPrefabName(structure.PrefabName);
+
+            if (structure.PrefabName == "StructureFrame")
+            {
+                // simulate plastic cladding on steel frames at last build stage, as turning the material into composite
+                if (structure.CurrentBuildStateIndex + 1 == structure.BuildStates.Count)
+                {
+                    material = ThermalConstants.Solid.Composite;
+                }
+                else if (structure.CurrentBuildStateIndex + 1 == structure.BuildStates.Count - 1)
+                {
+                    // treat airtight steel frame (stage 3 of 4) as finished
+                    buildStateMultiplier = 1;
+                }
+            }
 
             if (linkType == Link.Type.BulkConduction)
             {
-                return (buildStateMultiplier * length) / (ThermalConstants.getThermalConductivity(structure.PrefabName) * area);
+                return (buildStateMultiplier * length) / (ThermalConstants.getThermalConductivity(material) * area);
             }
             else if (linkType == Link.Type.SurfaceConduction)
             {
@@ -346,7 +361,7 @@ namespace StructureThermodynamicsOverhaul.scripts
             }
             else if (linkType == Link.Type.Radiation)
             {
-                return buildStateMultiplier / (ThermalConstants.getThermalEmissivity(structure.PrefabName) * area);
+                return buildStateMultiplier / (ThermalConstants.getThermalEmissivity(material) * area);
             }
             return 6969f;
         }

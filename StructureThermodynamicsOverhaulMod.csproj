@@ -33,28 +33,28 @@
             <Private>False</Private>
         </Reference>
         <Reference Include="BepInEx">
-          <HintPath>G:\SteamLibrary\steamapps\common\Stationeers\BepInEx\core\BepInEx.dll</HintPath>
+          <HintPath>$(StationeersDirectory)\BepInEx\core\BepInEx.dll</HintPath>
         </Reference>
         <Reference Include="BepInEx.Harmony">
-          <HintPath>G:\SteamLibrary\steamapps\common\Stationeers\BepInEx\core\BepInEx.Harmony.dll</HintPath>
+          <HintPath>$(StationeersDirectory)\BepInEx\core\BepInEx.Harmony.dll</HintPath>
         </Reference>
         <Reference Include="LaunchPadBooster">
-          <HintPath>..\..\SteamLibrary\steamapps\common\Stationeers\BepInEx\plugins\StationeersLaunchPad\LaunchPadBooster.dll</HintPath>
+          <HintPath>$(StationeersDirectory)\BepInEx\plugins\StationeersLaunchPad\LaunchPadBooster.dll</HintPath>
         </Reference>
         <Reference Include="StationeersLaunchPad">
-          <HintPath>..\..\SteamLibrary\steamapps\common\Stationeers\BepInEx\plugins\StationeersLaunchPad\StationeersLaunchPad.dll</HintPath>
+          <HintPath>$(StationeersDirectory)\BepInEx\plugins\StationeersLaunchPad\StationeersLaunchPad.dll</HintPath>
         </Reference>
         <Reference Include="StationeersMods.Interface">
-          <HintPath>..\..\SteamLibrary\steamapps\common\Stationeers\BepInEx\plugins\StationeersLaunchPad\StationeersMods.Interface.dll</HintPath>
+          <HintPath>$(StationeersDirectory)\BepInEx\plugins\StationeersLaunchPad\StationeersMods.Interface.dll</HintPath>
         </Reference>
         <Reference Include="StationeersMods.Shared">
-          <HintPath>..\..\SteamLibrary\steamapps\common\Stationeers\BepInEx\plugins\StationeersLaunchPad\StationeersMods.Shared.dll</HintPath>
+          <HintPath>$(StationeersDirectory)\BepInEx\plugins\StationeersLaunchPad\StationeersMods.Shared.dll</HintPath>
         </Reference>
         <Reference Include="UniTask">
-          <HintPath>G:\SteamLibrary\steamapps\common\Stationeers\rocketstation_Data\Managed\UniTask.dll</HintPath>
+          <HintPath>$(StationeersDirectory)\rocketstation_Data\Managed\UniTask.dll</HintPath>
         </Reference>
         <Reference Include="Unity.TextMeshPro">
-          <HintPath>G:\SteamLibrary\steamapps\common\Stationeers\rocketstation_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+          <HintPath>$(StationeersDirectory)\rocketstation_Data\Managed\Unity.TextMeshPro.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine">
             <HintPath>$(StationeersDirectory)\rocketstation_Data\Managed\UnityEngine.dll</HintPath>
@@ -73,7 +73,7 @@
             <Private>False</Private>
         </Reference>
         <Reference Include="UnityEngine.UI">
-          <HintPath>G:\SteamLibrary\steamapps\common\Stationeers\rocketstation_Data\Managed\UnityEngine.UI.dll</HintPath>
+          <HintPath>$(StationeersDirectory)\rocketstation_Data\Managed\UnityEngine.UI.dll</HintPath>
         </Reference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
