@@ -11,7 +11,7 @@ namespace StructureThermodynamicsOverhaul.scripts
     {
         public static readonly IEnumerable<string> StructuralPrefabNames = new HashSet<string> {
             //Frames
-            "StructureFrameIron", 
+            "StructureFrameIron",
             "StructureFrame",
             //"StructureFrameSide",
             //"StructureFrameCornerCut",
@@ -95,10 +95,15 @@ namespace StructureThermodynamicsOverhaul.scripts
             "StructureInteriorDoorTriangle",
 
             //Robot arm doors
-            "StructureRobotArmDoor"
+            "StructureRobotArmDoor",
+
+            //Force field
+            "StructureForceFieldDoor",
+            "StructureForceFieldDoor2x1",
+            "StructureForceFieldDoor4x2"
         };
         public static readonly IEnumerable<string> StructuralFramePrefabNames = new HashSet<string> {
-            "StructureFrameIron", 
+            "StructureFrameIron",
             "StructureFrame"
             //"StructureFrameSide",
             //"StructureFrameCornerCut"
@@ -111,7 +116,8 @@ namespace StructureThermodynamicsOverhaul.scripts
             Steel,
             Composite,
             Insulation,
-            Glass
+            Glass,
+            ForceField
         };
         private static readonly Dictionary<string, Solid> prefabToMatDict = new Dictionary<string, Solid> {
 
@@ -201,6 +207,12 @@ namespace StructureThermodynamicsOverhaul.scripts
 
             //Robot arm doors
             {"StructureRobotArmDoor", Solid.Steel},
+
+            //Force field
+            {"StructureForceFieldDoor", Solid.ForceField},
+            {"StructureForceFieldDoor2x1", Solid.ForceField},
+            {"StructureForceFieldDoor4x2", Solid.ForceField}
+
         };
 
         private static readonly Dictionary<Solid, float> materialThermalConductivity = new Dictionary<Solid, float>  {
@@ -209,7 +221,8 @@ namespace StructureThermodynamicsOverhaul.scripts
             {Solid.Steel, 20f},
             {Solid.Composite, 5f},
             {Solid.Insulation, 0.5f},
-            {Solid.Glass, 2f}
+            {Solid.Glass, 2f},
+            {Solid.ForceField, 0.001f}
         };
 
         private static readonly Dictionary<Solid, float> materialThermalEmissivity = new Dictionary<Solid, float>  {
@@ -218,7 +231,8 @@ namespace StructureThermodynamicsOverhaul.scripts
             {Solid.Steel, 0.1f},
             {Solid.Composite, 0.9f},
             {Solid.Insulation, 0.8f},
-            {Solid.Glass, 0.8f}
+            {Solid.Glass, 0.8f},
+            {Solid.ForceField, 0.001f}
         };
 
         public static float getBuildStateThermalMultiplier(int currentBuildState, int totalBuildStates)
